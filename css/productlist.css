@@ -1,0 +1,76 @@
+.productlist_nav {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  background-image: linear-gradient(#ffffff, #ebebeb);
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.productlist_nav button {
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 4px;
+  margin: 5px;
+  margin-right: 10px;
+  background-image: linear-gradient(#ebebeb, #ffffff);
+}
+.products {
+  background: #fff;
+}
+.products li {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.products li a {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 10px 15px 10px 110px;
+  position: relative;
+}
+.products li a img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.products li a .right {
+  padding-left: 20px;
+}
+.products li a .right span {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: red;
+}
+.products li a .right p {
+  font-size: 12px;
+}
+.page,
+.page2 {
+  height: 50px;
+  background: #fff;
+  padding: 8px;
+}
+.page div,
+.page2 div {
+  float: left;
+  width: 33.3%;
+  height: 100%;
+  text-align: center;
+}
+.page div button,
+.page2 div button {
+  background-image: linear-gradient(#ffffff, #ebebeb);
+}
+.page div select,
+.page2 div select {
+  border: 1px solid #bababa !important;
+  width: 80px;
+  height: 30px;
+  padding: 0 0 0 10px;
+  background: url("../images/arrow.png") no-repeat scroll right center transparent;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价-淘宝内部券</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <span class="mui-icon mui-icon mui-icon-back"></span>
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                    <div class="middle">
+                        <h3>
+                            白菜价-淘宝内部券
+                        </h3>
+                    </div>
+                </div>
+                <!-- 横向滚动导航 -->
+                <div class="nav">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll nav_list">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <ul>
+                        
+                    </ul>
+                </div>
+
+                <!-- 尾部 -->
+                <div class="mmb_footer">
+                    <div class="footer_nav clearfix">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="#" class="top">
+                            <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <span>手机app下载</span>
+                            <a href="#">慢慢买手机版</a>
+                            - -掌上比价平台
+                            <br> m.manmanbuy.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js区 -->
+    <script>
+        var ip = '127.0.0.1';
+    </script>
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/baicaijia.js"></script>
+    <!-- 模板区 -->
+    <!-- 主体内容模板 -->
+    <script type="text/html" id="tpl1">
+        {{each result v i}} 
+        <li class="ui-border-tb ">
+                <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx"
+                   target="_blank" style='position: absolute ;z-index: 666'></a>
+                <div class="pic">
+                  {{@ v.productImg}}
+                </div>
+                <div class="inf">
+                  <div class="i">
+                    <div class="t">{{@ v.productName}}</div>
+                    <div class="pr"><i>券后</i>{{@ v.productPrice}}
+                    </div>
+                  </div>
+                  <div class="o">
+                    {{@ v.productCouponRemain}}
+                    <div class="b clearfix">
+                      <div class="q">
+                        {{@ v.productCoupon}}
+                      </div>
+                      <div class="g" style='position: relative ;z-index: 999'>
+                          {{@ v.productHref}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>{{/each}}
+    </script>
+    <!-- 模板 -->
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+        <a class="mui-control-item {{ i==0? "mui-active":"" }} " href="baicaijia.html?titleid={{v.titleId}}" data-id="{{v.titleId}}">
+          {{v.title}}
+        </a>
+        {{/each}}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-商城导航</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <span class="mui-icon mui-icon mui-icon-back"></span>
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                    <div class="middle">
+                        <h3>
+                            商城导航
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <div class="info clearfix">
+                        <!--模板引擎-->
+                        <a href="#">
+                            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商城
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 尾部 -->
+                <div class="mmb_footer">
+                    <div class="footer_nav clearfix">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="#" class="top">
+                            <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <span>手机app下载</span>
+                            <a href="#">慢慢买手机版</a>
+                            - -掌上比价平台
+                            <br> m.manmanbuy.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js区 -->
+    <script>
+        var ip = '127.0.0.1';
+    </script>
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/sitenav.js"></script>
+    <!-- 模板区 -->
+    <!-- 主体内容模板 -->
+    <script type="text/html" id="tpl1">
+        {{each result v i}}
+        <a href="{{v.navHref}}" target="_blank">
+            <img src="{{v.navImg}}" alt="">{{v.navTitle}}</a>
+        {{/each}}
+    </script>
+
+
+</body>
+
+</html>

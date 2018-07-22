@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-品牌大全</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmb_search clearfix">
+                    <input type="text" class="fl" placeholder="请输入你想比价的商品">
+                    <button class="fr">搜索</button>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <!-- 导航 -->
+                    <div class="productlist_nav clearfix">
+                        <div class="left fl">
+                            <a href="index.html">首页</a> >
+                            <a href="brandTitle.html">全部分类</a> >
+
+                        </div>
+
+
+
+                    </div>
+                    <!--提示-->
+                    <div class="tips">
+                        <div class="info">
+                            热门品牌排行
+                        </div>
+                    </div>
+                    <!-- 商品列表 -->
+                    <div class="products">
+                        <ul class="mui-table-view ">
+
+                        </ul>
+                    </div>
+
+                    <!-- 尾部 -->
+                    <div class="mmb_footer">
+                        <div class="footer_nav clearfix">
+                            <a href="#">登录</a>
+                            <a href="#">注册</a>
+                            <a href="#" class="top">
+                                <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <span>手机app下载</span>
+                                <a href="#">慢慢买手机版</a>
+                                - -掌上比价平台
+                                <br> m.manmanbuy.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- js区 -->
+        <script>
+            var ip = '127.0.0.1';
+        </script>
+        <script src="./lib/jquery-1.12.4.min.js"></script>
+        <script src="./lib/mui/js/mui.min.js"></script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/brandTitle.js"></script>
+
+        <!-- 模板区 -->
+        <!-- 列表模板 -->
+        <script type="text/html" id="tpl1">
+            {{each result v i}}
+            <li class="mui-table-view-cell mui-collapse ">
+                <a class="" href="brand.html?brandtitleid={{v.brandTitleId}}" data-id="{{v.titleId}}">{{v.brandTitle}}</a>
+            </li>
+            {{/each}}
+        </script>
+
+</body>
+
+</html>

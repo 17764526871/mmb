@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-商品详情页</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/bijia.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmb_search clearfix">
+                    <input type="text" class="fl" placeholder="请输入你想比价的商品">
+                    <button class="fr">搜索</button>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <!-- 导航 -->
+                    <div class="productlist_nav clearfix">
+                        
+                        
+
+
+                    </div>
+                    <!-- 商品详情 -->
+                    <div class="product_item">
+
+                    </div>
+                    <!-- 比价购买 -->
+                    <div class="mmb_bijia clearfix">
+                        <a href="#">比价购买</a>
+                        <a href="#">产品参数</a>
+                        <a href="#">评价(23333)</a>
+                    </div>
+                    <!-- 商品价格 -->
+                    <div class="price clearfix">
+                       
+
+                    </div>
+                    <!-- 商品说明 -->
+                    <div class="tip">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+
+                    <!-- 网友评论 -->
+                    <div class="comment">
+                        <div class="user_comment">网友评论</div>
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                    <!--查看更多评价  -->
+                    <div class="more">
+                        <a href="#">查看更多评价</a>
+                    </div>
+
+
+
+                    <!-- 尾部 -->
+                    <div class="mmb_footer">
+                        <div class="footer_nav clearfix">
+                            <a href="#">登录</a>
+                            <a href="#">注册</a>
+                            <a href="#" class="top">
+                                <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <span>手机app下载</span>
+                                <a href="#">慢慢买手机版</a>
+                                - -掌上比价平台
+                                <br> m.manmanbuy.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- js区 -->
+        <script>
+            var ip = '127.0.0.1';
+        </script>
+        <script src="./lib/jquery-1.12.4.min.js"></script>
+        <script src="./lib/mui/js/mui.min.js"></script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/bijia.js"></script>
+
+        <!-- 模板区 -->
+        <!-- 商品详情模板 -->
+        <script type="text/html" id="tpl1">
+            {{each result v i}}
+            <div class="name">{{v.productName}}</div>
+            <div class="img">
+                {{@ v.productImg}}
+            </div>
+            <div class="icon">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+            </div>
+            {{/each}}
+        </script>
+        <!-- 导航模板 -->
+        <script type="text/html" id="tpl2">
+            <div class="left fl">
+                    <a href="index.html">首页</a> >
+                    <a href="productlist.html?categoryid={{categoryId}}&category={{category}}&pageid=1">{{category}}</a> >
+                    <a href="#">{{newName}}</a> >
+            </div>
+            <button class="mui-btn mui-btn-outlined fr">筛选</button>
+        </script>
+        <!--后台传过来的表格-->
+        <script type="text/html" id="tpl3">
+            {{each result v i}} {{@ v.bjShop}} {{/each}}
+        </script>
+        <!-- 评论模板 -->
+        <script type="text/html" id="tpl4">
+            {{each result v i }}
+              <li>
+                    <p class="nsername clearfix">
+                        <span class="fl">{{v.comName}}</span>
+                        <span class="fr">{{v.comTime}}</span>
+                    </p>
+                    <p class="shop ">{{v.comFrom}}</p>
+                    <p class="content">{{v.comContent}}</p>
+                </li>
+            {{/each}}
+        </script>
+</body>
+
+</html>

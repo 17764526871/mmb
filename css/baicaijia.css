@@ -1,0 +1,145 @@
+.mmb_header {
+  background-color: #F4483E;
+}
+.mmb_header .header_left {
+  color: #fff;
+}
+.mmb_header .middle {
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+.nav .mui-scroll .mui-active {
+  color: #e4393c !important;
+  border-bottom: 2px solid #e4393c !important;
+}
+.mmb_main li {
+  height: 150px;
+  padding: 10px 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.mmb_main li > a {
+  display: block;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+}
+.mmb_main li .pic {
+  height: 130px;
+  width: 135px;
+  float: left;
+}
+.mmb_main li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.mmb_main li .inf {
+  overflow: hidden;
+}
+.mmb_main li .inf .i .t {
+  height: 28px;
+  line-height: 28px;
+}
+.mmb_main li .inf .i .pr {
+  height: 28px;
+  line-height: 28px;
+  color: #fc353a;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.mmb_main li .inf .i .pr i {
+  font-size: 16px;
+  margin-right: 5px;
+  font-style: normal;
+}
+.mmb_main li .inf .i .pr em {
+  font-size: 12px;
+  vertical-align: middle;
+  font-style: normal;
+}
+.mmb_main li .inf .i .pr del {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #a8a8a8;
+}
+.mmb_main li .inf .o .bar {
+  margin-top: 10px;
+  position: relative;
+}
+.mmb_main li .inf .o .bar a {
+  display: block;
+  height: 60px;
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+.mmb_main li .inf .o .bar i {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: block;
+  height: 14px;
+  width: 82px;
+  border: 1px solid #fc353a;
+  border-radius: 5px;
+  background-color: #ffb7b7;
+  position: relative;
+}
+.mmb_main li .inf .o .bar i em {
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #fc353a;
+}
+.mmb_main li .inf .o .bar i span {
+  display: block;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  font-style: normal;
+  line-height: 100%;
+  font-weight: 700;
+  position: absolute;
+}
+.mmb_main li .inf .o .bar b {
+  overflow: hidden;
+  font-size: 12px;
+  vertical-align: middle;
+  color: #fc353a;
+  font-weight: 400;
+}
+.mmb_main li .inf .o .b {
+  margin-top: 10px;
+}
+.mmb_main li .inf .o .b .q {
+  height: 28px;
+  width: 120px;
+  float: left;
+  border: 1px dotted #E4393C;
+}
+.mmb_main li .inf .o .b .q a {
+  display: block;
+  height: 100%;
+  line-height: 26px;
+  text-align: center;
+  font-size: 12px;
+  color: #e4393c;
+}
+.mmb_main li .inf .o .b .g {
+  float: right;
+  margin-right: 10px;
+  background-color: #FF5E5D;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.mmb_main li .inf .o .b .g a {
+  color: #fff;
+  z-index: 1;
+}

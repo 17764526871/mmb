@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-国内折扣详情</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/discount.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="javascript:history.go(-1);">
+                        <span class="mui-icon mui-icon mui-icon-back"></span>
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                    <div class="middle">
+                        <h2>
+                            国内折扣
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <div class="container">
+
+                    </div>
+                    <!-- 列表 -->
+                    <div class="productlist">
+
+                    </div>
+                    <!-- 点击购买 -->
+                    <div class="buy">
+                        <a href="#">前往购买</a>
+                    </div>
+                    <!--宣传图片-->
+                    <div class="see">
+                        <img src="./images/mmbweixin2.png" alt="">
+                    </div>
+                    <!--评论-->
+                    <div class="comment">
+                        <!--模板引擎-->
+                    </div>
+
+                </div>
+
+                <!-- 尾部 -->
+                <div class="mmb_footer">
+                    <div class="footer_nav clearfix">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="#" class="top">
+                            <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <span>手机app下载</span>
+                            <a href="#">慢慢买手机版</a>
+                            - -掌上比价平台
+                            <br> m.manmanbuy.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js区 -->
+    <script>
+        var ip = '127.0.0.1';
+    </script>
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/discount.js"></script>
+    <!-- 模板区 -->
+    <!-- 主体内容模板 -->
+    <script type="text/html" id="tpl1">
+        {{each result v i}}
+        <h3>{{v.productName}}</h3>
+        <h4>{{v.productPrice}}</h4>
+        <div class="info">
+            <span class="name">{{v.productFrom}}</span>
+            <span class="time">{{v.productTime}}</span>
+            <span class="author">{{v.productTips}}</span>
+        </div>
+        <div class="content">
+                <p>{{v.productInfo}}</p>
+                {{@ v.productImg}}
+        </div>
+        {{/each}}
+    </script>
+    <!-- 评论模板 -->
+    <script type="text/html" id="tpl3">
+        {{@ result[0].productComment}}
+    </script>
+</body>
+
+</html>

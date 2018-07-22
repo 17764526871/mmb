@@ -1,0 +1,143 @@
+.mmb_header {
+    background-color: #F4483E;
+    .header_left {
+        color: #fff;
+    }
+    .middle {
+        color: #fff;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+.tips {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #999;
+}
+
+.mmb_main {
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #E7E7E7;
+        a {
+            display: block;
+            height: 80px;
+            padding-left: 110px;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 80px;
+            }
+            >div {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+            span {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 12px;
+                color: #EE7700;
+                padding: 10px 0;
+                margin: 0;
+            }
+        }
+        .mui-popover.mui-active {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//模态框样式
+.dsn {
+    display: none;
+}
+
+.modal {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    .box {
+        width: 100%;
+        height: 300px;
+        margin-top: 30%;
+        position: relative;
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 40px;
+            margin: 10px;
+            height: 100%;
+            color: #fff;
+            vertical-align: middle;
+            background: rgb(82, 77, 77);
+            border-radius: 5px;
+            &::before {
+                position: relative;
+                top: 20px;
+
+            }
+        }
+    }
+    .left {
+        margin-top: 10%;
+        float: left;
+        width: 25%;
+        height: 75px;
+        text-align: right;
+    }
+    .img {
+        float: left;
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+        
+
+        ul{
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            
+
+            li {
+                width: 100%;
+                img {
+                    width: 100%;
+
+                }
+            }
+        }
+
+    }
+
+    .right {
+        margin-top: 10%;
+        float: left;
+        width: 25%;
+        height: 75px;
+    }
+    .close {
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

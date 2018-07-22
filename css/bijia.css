@@ -1,0 +1,125 @@
+.productlist_nav {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  background-image: linear-gradient(#ffffff, #ebebeb);
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.productlist_nav button {
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 4px;
+  margin: 5px;
+  margin-right: 10px;
+  background-image: linear-gradient(#ebebeb, #ffffff);
+}
+.product_item {
+  width: 100%;
+  height: 400px;
+  background: #fff;
+  position: relative;
+}
+.product_item .name {
+  width: 80%;
+  text-align: center;
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-size: 16px;
+}
+.product_item .img img {
+  height: 170px;
+  margin: 0 auto;
+}
+.product_item .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.product_item .icon img {
+  height: 40px;
+  width: 40px;
+  margin: 24px;
+}
+.mmb_bijia {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border-top: 1px solid #C14D00;
+  border-bottom: 1px solid #C14D00;
+  text-align: center;
+}
+.mmb_bijia a {
+  float: left;
+  height: 100%;
+  width: 33.3%;
+  color: #fff;
+  font-size: 16px;
+}
+.mmb_bijia a:nth-child(1) {
+  background: linear-gradient(#ffa632, #ff9000);
+}
+.mmb_bijia a:nth-child(2) {
+  background: linear-gradient(#ffd050, #ffbb00);
+}
+.mmb_bijia a:nth-child(3) {
+  background: linear-gradient(#ffd050, #ffd050);
+}
+.price {
+  width: 100%;
+  padding: 8px;
+  height: 44px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.tip {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #888;
+  background-color: #fff;
+  border-top: 1px solid #bbb;
+  border-bottom: 4px solid #747474;
+}
+.comment {
+  background: #fff;
+}
+.comment .user_comment {
+  height: 40px;
+  background-color: #dbdbdb;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+.comment li {
+  padding: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}
+.comment li p {
+  margin: 0;
+}
+.comment li .shop {
+  text-align: right;
+}
+.more {
+  height: 50px;
+  background-color: #fff;
+  padding-top: 10px;
+}
+.more a {
+  display: block;
+  height: 32px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(#f1f1f1, #d4d4d4);
+}

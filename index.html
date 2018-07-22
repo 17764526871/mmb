@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-首页</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmb_search clearfix">
+                    <input type="text" class="fl" placeholder="请输入你想比价的商品">
+                    <button class="fr">搜索</button>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <div class="mmb_nav clearfix">
+                        <!-- 模板 -->
+                    </div>
+                    <div class="title clearfix">
+                        <span class="fl">超值折扣推荐</span>
+                        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+                    </div>
+                    <div class="mmb_content ">
+                        <ul>
+
+                        </ul>
+                        <div class="mmb_more ">
+                            <a class="more_btn" href="moneyctrl.html">更多优惠信息 »</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- 尾部 -->
+                <div class="mmb_footer">
+                    <div class="title clearfix">
+                        <span class="fl">品牌排行</span>
+                        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+                    </div>
+                    <div class="footer_nav clearfix">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="#" class="top">
+                            <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <span>手机app下载</span>
+                            <a href="#">慢慢买手机版</a>
+                            - -掌上比价平台
+                            <br> m.manmanbuy.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js区 -->
+    <script>
+        var ip = '127.0.0.1';
+    </script>
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- 模板区 -->
+    <!-- 导航模板 -->
+    <script type="text/html" id="tpl1">
+        {{each result v i}}
+        <a href="{{ v.titlehref }}" data-id="{{ v.indexmenuId }}">
+            <!--模板引擎的一种语法  解析html格式-->
+            {{@v.img }}
+            <p>{{ v.name }}</p>
+        </a>
+        {{/each}}
+    </script>
+    <!-- 商品模板 -->
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+        <li>
+            <a href="moneyproduct.html?productid={{v.productId}}">
+                {{@v.productImgSm}}
+                <div class="product_right">
+                    <div class="mui-ellipsis-2 ">{{v.productName}}
+                        <span class="price">{{v.productPinkage}}</span>
+                    </div>
+                    <p>{{v.productFrom}} | {{v.productTime}}
+                        <span class="fr mui-icon mui-icon-chat">{{v.productComCount}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

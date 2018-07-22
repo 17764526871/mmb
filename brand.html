@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-那个牌子好</title>
+    <link rel="icon" href="./tangge.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brand.css">
+
+</head>
+
+<body>
+    <!-- 页面区 -->
+    <div class="mmb_view">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 公用头部 -->
+                <div class="mmb_header clearfix">
+                    <a class="header_left fl" href="index.html">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="header_right fr">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmb_search clearfix">
+                    <input type="text" class="fl" placeholder="请输入你想比价的商品">
+                    <button class="fr">搜索</button>
+                </div>
+
+                <!-- 中间内容 -->
+                <div class="mmb_main">
+                    <!-- 导航 -->
+                    <div class="productlist_nav clearfix">
+                        <div class="left fl">
+                            <a href="index.html">首页</a> >
+                            <a href="brandTitle.html">全部分类</a> >
+                        </div>
+
+                    </div>
+                    <!-- 哪个牌子好 -->
+                    <div class="product_good">
+                        <h3>哪个牌子好</h3>
+                        <ul>
+                            <!--模板引擎-->
+
+                        </ul>
+                    </div>
+
+                    <!-- 销量排行 -->
+                    <div class="sales">
+                        <h3>销量排行</h3>
+                        <ul>
+                            <!--模板引擎-->
+
+
+                        </ul>
+                    </div>
+                    <!-- 最新评论 -->
+                    <div class="commons">
+                        <h3>最新评论</h3>
+                        <ul>
+                            <!--模板引擎-->
+
+                        </ul>
+                    </div>
+
+                    <!-- 尾部 -->
+                    <div class="mmb_footer">
+                        <div class="footer_nav clearfix">
+                            <a href="#">登录</a>
+                            <a href="#">注册</a>
+                            <a href="#" class="top">
+                                <span class="fa fa-arrow-up"></span> 返回顶部</a>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <span>手机app下载</span>
+                                <a href="#">慢慢买手机版</a>
+                                - -掌上比价平台
+                                <br> m.manmanbuy.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- js区 -->
+        <script>
+            var ip = '127.0.0.1';
+        </script>
+        <script src="./lib/jquery-1.12.4.min.js"></script>
+        <script src="./lib/mui/js/mui.min.js"></script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/brand.js"></script>
+
+        <!-- 模板区 -->
+        <!-- 哪个产品好模板 -->
+        <script type="text/html" id="tpl1">
+            {{each result v i}}
+            <li>
+                <span class="mui-icon mui-icon mui-icon-forward"></span>
+                <a href="productlist.html?categoryid=0&pageid=1">
+                    <em>{{i+1}}</em>
+                    <div class="info">
+                        <div class="th">
+                            {{v.brandName}}
+                        </div>
+                        <p class="">{{v.brandInfo}}</p>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </script>
+        <!-- 销量排行模板 -->
+        <script type="text/html" id="tpl2">
+            {{each result v i}}
+            <li>
+                <a href="bijia.html?productid={{v.productId}}">
+                    {{@v.productImg}}
+                    <div class="right">
+                        <div class="mui-ellipsis">{{v.productName}}</div>
+                        <span>{{v.productPrice}}</span>
+                        <p>{{v.productQuote}}&nbsp;{{v.productCom}}</p>
+
+                    </div>
+                    <span class="star">★★★★★</span>
+                </a>
+            </li>
+            {{/each}}
+        </script>
+        <!-- 评论模板 -->
+        <script type="text/html" id="tpl3">
+            {{each result v i}}
+            <li>
+                <div class="com_header clearfix">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                    <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                </div>
+                <div class="content">
+                    <div class="name">
+                        {{v.comName}}:
+                        <span class="star1">★★★★★</span>
+                        <i>{{v.comTime}}</i>
+                    </div>
+                    <p>{{v.comContent}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+
+
+
+</body>
+
+</html>

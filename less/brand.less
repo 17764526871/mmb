@@ -1,0 +1,178 @@
+.productlist_nav {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    background-image: linear-gradient(#ffffff, #ebebeb);
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+h3 {
+    height: 40px;
+    padding-left: 10px;
+    background-color: #F3F3F3;
+    line-height: 40px;
+    border: 1px solid #C8C8C8;
+    font-size: 16px;
+    color: #874604;
+}
+
+.product_good {
+    ul {
+        li {
+            height: 75px;
+            background-color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #E7E7E7;
+            &>span {
+                margin-top: 16px;
+                color: #A9B7B7;
+                float: right;
+                display: block;
+                font-size: 30px;
+            }
+            em {
+                font-style: normal;
+                display: block;
+                width: 20px;
+                height: 20px;
+                float: left;
+                background-color: #c9c9c9;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+            }
+            &:nth-child(1) em {
+                background-color: #f10e0e;
+            }
+            &:nth-child(2) em {
+                background-color: #ff9314;
+            }
+            &:nth-child(3) em {
+                background-color: #8adf5b;
+            }
+            a {
+                display: block;
+                .info {
+                    margin-left: 30px;
+                    .th {
+                        font-size: 16px;
+                    }
+                    p {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sales {
+    background: #fff;
+    li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        a {
+            display: block;
+            width: 100%;
+            height: 120px;
+            padding: 10px 15px 10px 110px;
+            position: relative;
+            img {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .right {
+                padding-left: 20px;
+                span {
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    color: red;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+            .star {
+                position: absolute;
+                top: 44px;
+                right: 10px;
+                font-style: normal;
+                margin-right: 10px;
+                font-size: 20px;
+                color: #FF9000;
+            }
+        }
+    }
+}
+
+.commons {
+    li {
+        background-color: #fff;
+        padding: 10px;
+        .com_header {
+            img {
+                float: left;
+                margin-right: 20px;
+                height: 100px;
+                width: 100px;
+            }
+        }
+        .content {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #F8F8F8;
+            border: 1px solid #E7E7E7;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: 8px solid #e7e7e7;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                top: -8px;
+                left: 39px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: 8px solid #f8f8f8;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                top: -7px;
+                left: 40px;
+            }
+            .name {
+                color: #4f6900;
+                font-size: 14px;
+                height: 30px;
+                .star1 {
+                    font-style: normal;
+                    margin-right: 10px;
+                    font-size: 20px;
+                    color: #FF9000;
+                }
+                i {
+                    float: right;
+                    font-size: 12px;
+                    color: #999;
+                    font-style: normal;
+                }
+            }
+            >p {
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+    }
+}
