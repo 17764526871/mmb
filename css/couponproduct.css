@@ -101,6 +101,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  transition: all 1s;
 }
 .modal .img ul li {
   width: 100%;
